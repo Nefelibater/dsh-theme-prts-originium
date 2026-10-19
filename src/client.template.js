@@ -8,6 +8,10 @@ window.__ModuleLoader__.load({
     const FOCUS_ATTR = 'data-po-focus';
     const FOCUS_KEY = 'prts-originium:focus:v1';
     const BOOT_KEY = 'prts-originium:boot:v1';
+    const DISABLED_KEY = 'prts-originium:disabled:v1';
+    function isThemeDisabled() {
+      try { return localStorage.getItem(DISABLED_KEY) === '1'; } catch { return false; }
+    }
     const TOKENS = __TOKENS__;
     const CSS = __CSS__;
     const ORIGINIUM = __ORIGINIUM__;
@@ -179,24 +183,67 @@ window.__ModuleLoader__.load({
         try {
           const url = typeof args[0] === 'string' ? args[0] : args[0]?.url;
           if (url && (url.includes('/dsh-market/toggle') || url.includes('/dsh-market/use-skin'))) {
-            const bodyStr = args[1]?.body;
-            if (typeof bodyStr === 'string' && (bodyStr.includes(SOURCE) || url.includes('/dsh-market/use-skin'))) {
+            let bodyObj = null;
+            try {
+              const rawBody = args[1]?.body;
+              if (typeof rawBody === 'string') bodyObj = JSON.parse(rawBody);
+              else if (typeof rawBody === 'object' && rawBody !== null) bodyObj = rawBody;
+            } catch {}
+
+            if (url.includes('/dsh-market/toggle') && bodyObj && bodyObj.name === SOURCE) {
+              if (bodyObj.enabled === false) {
+                try { localStorage.setItem(DISABLED_KEY, '1'); } catch {}
+              } else if (bodyObj.enabled === true) {
+                try { localStorage.removeItem(DISABLED_KEY); } catch {}
+              }
               if (response.ok) {
                 setTimeout(() => {
                   window.location.reload();
-                }, 350);
+                }, 300);
+              }
+            } else if (url.includes('/dsh-market/use-skin')) {
+              if (bodyObj && (bodyObj.name === SOURCE || bodyObj.name === 'prts-originium')) {
+                try { localStorage.removeItem(DISABLED_KEY); } catch {}
+              } else if (bodyObj && bodyObj.name) {
+                try { localStorage.setItem(DISABLED_KEY, '1'); } catch {}
+              }
+              if (response.ok) {
+                setTimeout(() => {
+                  window.location.reload();
+                }, 300);
               }
             }
           }
         } catch { /* ignore */ }
         return response;
       };
+
+      try {
+        originalFetch.call(window, '/dsh-market/installed')
+          .then(res => res && res.ok ? res.json() : null)
+          .then(data => {
+            if (data && Array.isArray(data.disabled)) {
+              const remoteDisabled = data.disabled.includes(SOURCE);
+              const localDisabled = isThemeDisabled();
+              if (remoteDisabled && !localDisabled) {
+                try { localStorage.setItem(DISABLED_KEY, '1'); } catch {}
+                window.location.reload();
+              } else if (!remoteDisabled && localDisabled) {
+                try { localStorage.removeItem(DISABLED_KEY); } catch {}
+                window.location.reload();
+              }
+            }
+          })
+          .catch(() => {});
+      } catch {}
+
       return () => {
         window.fetch = originalFetch;
       };
     }
     function apply(ctx) {
       ctx.effect(installMarketSync, 'prts-originium: market sync');
+      if (isThemeDisabled()) return;
       ctx.effect(() => {
         if (typeof document === 'undefined' || !document.body) return () => {};
         const body = document.body;
