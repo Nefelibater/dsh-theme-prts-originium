@@ -1,0 +1,258 @@
+{
+  "bg-base": [
+    "#e8eff0",
+    "#11181b"
+  ],
+  "bg-layer-1": [
+    "#f4f8f8",
+    "#192226"
+  ],
+  "bg-layer-2": [
+    "#e3e7e8",
+    "#232f34"
+  ],
+  "bg-layer-3": [
+    "#d9dee0",
+    "#323637"
+  ],
+  "bg-overlay": [
+    "#f4f8f8",
+    "#212425"
+  ],
+  "bg-module-platform": [
+    "#e1e6e8",
+    "#262a2c"
+  ],
+  "bg-document-preview": [
+    "#f4f8f8",
+    "#192226"
+  ],
+  "bg-skeleton": [
+    "#d9dee0",
+    "#323637"
+  ],
+  "border-l1": [
+    "#c5d2d6",
+    "#34454d"
+  ],
+  "border-l2": [
+    "#b5bcbf",
+    "#4f5659"
+  ],
+  "border-l3": [
+    "#c5d2d6",
+    "#34454d"
+  ],
+  "border-l4": [
+    "#b5bcbf",
+    "#4f5659"
+  ],
+  "brand-primary": [
+    "#73571d",
+    "#dec78d"
+  ],
+  "brand-text": [
+    "#73571d",
+    "#dec78d"
+  ],
+  "label-primary": [
+    "#222e33",
+    "#e4ecee"
+  ],
+  "label-primary-bluish": [
+    "#222e33",
+    "#e4ecee"
+  ],
+  "label-primary-dimmed": [
+    "#494f52",
+    "#bdc3c6"
+  ],
+  "label-secondary": [
+    "#465a64",
+    "#b4c3c9"
+  ],
+  "label-tertiary": [
+    "#4c626b",
+    "#9dafb6"
+  ],
+  "label-caption": [
+    "#4c626b",
+    "#9dafb6"
+  ],
+  "label-dimmed": [
+    "#6d7477",
+    "#90979a"
+  ],
+  "label-primary-inverted": [
+    "#f4f8f8",
+    "#11181b"
+  ],
+  "label-primary-foreground": [
+    "#f4f8f8",
+    "#11181b"
+  ],
+  "link": [
+    "#765719",
+    "#e3cc92"
+  ],
+  "button-primary-fill": [
+    "#685421",
+    "#dec78d"
+  ],
+  "button-primary-hover": [
+    "#514019",
+    "#eed9a6"
+  ],
+  "button-info-fill": [
+    "#685421",
+    "#dec78d"
+  ],
+  "button-info-hover": [
+    "#514019",
+    "#eed9a6"
+  ],
+  "button-elevated-fill": [
+    "#dfe5e7",
+    "#2c3032"
+  ],
+  "button-floating-fill": [
+    "#f4f8f8",
+    "#292d2f"
+  ],
+  "button-floating-hover": [
+    "#d8dfe2",
+    "#373d40"
+  ],
+  "button-tool-bar-fill": [
+    "#e3e7e8",
+    "#232f34"
+  ],
+  "button-tool-bar-hover": [
+    "#d7dee1",
+    "#373d40"
+  ],
+  "interactive-bg-hover": [
+    "#dce2e4",
+    "#2f3537"
+  ],
+  "interactive-bg-hover-solid": [
+    "#dce2e4",
+    "#2f3537"
+  ],
+  "interactive-bg-hover-accent": [
+    "#e6dcc2",
+    "#3b3828"
+  ],
+  "interactive-bg-active": [
+    "#d7dee1",
+    "#373d40"
+  ],
+  "button-ghost-active-fill": [
+    "#dfe5e7",
+    "#2c3032"
+  ],
+  "button-ghost-active-border": [
+    "#879297",
+    "#727c81"
+  ],
+  "markdown-inline-code": [
+    "#dfe8ea",
+    "#2d3234"
+  ],
+  "markdown-code-block": [
+    "#e2e6e8",
+    "#0e1518"
+  ],
+  "markdown-code-block-banner": [
+    "#d5dbde",
+    "#282d2f"
+  ],
+  "markdown-tag": [
+    "#d8e0e3",
+    "#32393c"
+  ],
+  "menu-group-header-fill": [
+    "#e0e6e8",
+    "#2c3032"
+  ],
+  "menu-icon": [
+    "#4c626b",
+    "#b4c3c9"
+  ],
+  "settings-card-fill": [
+    "#f4f8f8",
+    "#212425"
+  ],
+  "settings-card-stroke": [
+    "#c5d2d6",
+    "#34454d"
+  ],
+  "tooltip-bg": [
+    "#282c2e",
+    "#dce3e6"
+  ],
+  "tooltip-key-bg": [
+    "#464d50",
+    "#b7c1c5"
+  ],
+  "toast-bg": [
+    "#282c2e",
+    "#dce3e6"
+  ],
+  "toast-label": [
+    "#eef2f4",
+    "#222628"
+  ],
+  "state-business-primary": [
+    "#73571d",
+    "#dec78d"
+  ],
+  "state-business-tertiary": [
+    "#e6dcc2",
+    "#3b3828"
+  ],
+  "state-error-primary": [
+    "#a12c39",
+    "#f39a9d"
+  ],
+  "state-success-primary": [
+    "#286342",
+    "#98c7a4"
+  ],
+  "state-warn-primary": [
+    "#805319",
+    "#e9c57e"
+  ],
+  "state-warn-label": [
+    "#714414",
+    "#e9c57e"
+  ],
+  "state-idle-primary": [
+    "#4c626b",
+    "#9dafb6"
+  ],
+  "scrollbar-bg-l1": [
+    "#a0a9ac",
+    "#545d61"
+  ],
+  "scrollbar-bg-l2": [
+    "#a0a9ac",
+    "#545d61"
+  ],
+  "scrollbar-hover-l1": [
+    "#6f7a7f",
+    "#808c91"
+  ],
+  "scrollbar-hover-l2": [
+    "#6f7a7f",
+    "#808c91"
+  ],
+  "turn-trigger-bg": [
+    "#dfe5e7",
+    "#2b3134"
+  ],
+  "turn-trigger-bg-hover": [
+    "#cfd8dc",
+    "#373d40"
+  ]
+}

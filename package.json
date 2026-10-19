@@ -1,0 +1,78 @@
+{
+  "name": "dsh-theme-prts-originium",
+  "version": "1.4.1",
+  "type": "module",
+  "description": "PRTS · 源石协议：可旋转 3D 源石晶簇 / 工业指令面板 / 普瑞赛斯记忆残片 / PRTS 启动动画",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg",
+    "./skin.json": "./skin.json",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "skin.json",
+    "locale",
+    "README.md",
+    "SOURCES.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/export-model.mjs",
+    "test": "node scripts/verify.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "author": "Nefelibater",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "dsh-theme",
+    "dsh-market",
+    "arknights",
+    "prts",
+    "originium",
+    "priestess"
+  ],
+  "engines": {
+    "dsh": ">=0.1.7-rc.1 <0.3.0-0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh": ">=0.1.7-rc.1 <0.3.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nefelibater/dsh-theme-prts-originium.git"
+  },
+  "homepage": "https://github.com/Nefelibater/dsh-theme-prts-originium#readme",
+  "bugs": {
+    "url": "https://github.com/Nefelibater/dsh-theme-prts-originium/issues"
+  }
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" fill="none" aria-hidden="true">
+  <g class="po-diagram__grid" stroke="currentColor" stroke-width=".7" opacity=".3">
+    <path d="M30 100H970M30 270H970M30 440H970M200 40V500M500 40V500M800 40V500"/>
+    <path d="M50 65V40H75M925 40H950V65M50 475V500H75M925 500H950V475" stroke-width="2"/>
+    <path d="M80 282V258M180 278V262M280 278V262M380 278V262M480 282V258M580 278V262M680 278V262M780 278V262M880 282V258"/>
+  </g>
+  <g class="po-diagram__orbits" stroke="currentColor" stroke-width=".9">
+    <ellipse cx="584" cy="270" rx="302" ry="148" transform="rotate(-19 584 270)"/>
+    <ellipse cx="584" cy="270" rx="215" ry="206" transform="rotate(18 584 270)" stroke-dasharray="2 7"/>
+    <circle cx="584" cy="270" r="83" stroke-dasharray="2 4"/>
+    <path d="M337 270A247 247 0 0 1 584 23M831 270A247 247 0 0 1 584 517" opacity=".45"/>
+    <path d="M584 23V42M584 498V517M337 270H357M811 270H831" stroke-width="2"/>
+  </g>
+  <g class="po-diagram__construction" stroke="currentColor" stroke-width="1">
+    <path d="m584 52 173 218-173 218-173-218Z"/>
+    <path d="m584 102 132 168-132 168-132-168Z" stroke-dasharray="5 6"/>
+    <path d="M584 52V488M411 270H757M452 102H716M452 438H716" opacity=".5"/>
+    <path d="m391 107 26-32 28 35-26 33Zm385 316 19-24 21 26-20 25Z"/>
+    <path d="M419 143V176L486 211M796 399V361L681 316M757 270H916V169M411 270H281V365H176"/>
+    <path d="M173 353V377M165 365H188M908 157V181M900 169H924" stroke-width="2"/>
+  </g>
+  <g class="po-diagram__crystal" stroke="currentColor" stroke-width="1.2" stroke-linejoin="bevel">
+    <path class="po-diagram__face" d="m584 116 94 127-42 115-52 64-74-125Z"/>
+    <path class="po-diagram__face-alt" d="m584 116 15 134 37 108-52 64-12-136-62 11Z"/>
+    <path d="m584 116 15 134 79-7-106 43 64 72-52 64M510 297l89-47M572 286l12 136"/>
+    <path class="po-diagram__energy" d="m589 175 10 75-27 36 43 49M599 250l42-4M572 286l-24 7" stroke-width="3"/>
+    <path d="m537 155-57 72-9-40 47-60Zm130 195 37-72 13 39-37 67Z" opacity=".65"/>
+    <path d="m518 127-4 48-34 52m200 157 6-43 18-63" opacity=".45"/>
+  </g>
+  <g class="po-diagram__notes" stroke="currentColor" stroke-width=".9">
+    <path d="M72 120H248V191H336L449 226M72 128H230M72 136H204M72 144H164"/>
+    <circle cx="150" cy="210" r="39"/><circle cx="150" cy="210" r="27"/>
+    <path d="M98 210H202M150 158V262m-31-53 31-31 31 31-31 32Z"/>
+    <path d="M126 320H230M126 330H202M126 340H185M124 450H292l108-87h69"/>
+    <path d="M773 80H929M773 118H929M773 99H929"/>
+    <path d="M778 80V118M790 80V101M802 80V118M814 80V101M826 80V118M838 80V101M850 80V118M862 80V101M874 80V118M886 80V101M898 80V118M910 80V101M922 80V118" stroke-width="4"/>
+    <path d="M825 385h110m-110 8h110m-110 8h79M812 438h123m-123 7h123m-123 7h94"/>
+    <path d="M843 300h16v16h-16Zm35 0h16v16h-16Zm35 0h16v16h-16Z"/>
+    <path d="M77 270h8v8h-8Zm503-222h8v8h-8Zm330 117h8v8h-8ZM169 361h8v8h-8Z" fill="currentColor" stroke="none"/>
+  </g>
+  <g class="po-diagram__labels" fill="currentColor" font-family="PO Bender,monospace" font-size="10" letter-spacing="2">
+    <text x="72" y="105">STRUCTURAL FIELD / 01</text><text x="74" y="292">X — 000</text>
+    <text x="126" y="310">PHASE RELATION</text><text x="132" y="467">ORIGINIUM</text>
+    <text x="785" y="66">A / B / C</text><text x="827" y="376">LATTICE.01</text>
+    <text x="813" y="475">PRTS / RECORD</text><text x="595" y="519">Y — 001</text>
+  </g>
+</svg>

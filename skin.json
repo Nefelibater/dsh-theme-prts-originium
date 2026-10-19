@@ -1,0 +1,19 @@
+{
+  "id": "prts-originium",
+  "name": "PRTS · 源石协议",
+  "nameEn": "PRTS · Originium Protocol",
+  "tagline": "信息的形状，记忆的切面",
+  "package": "dsh-theme-prts-originium",
+  "bodyAttr": "data-dsh-prts-originium",
+  "accent": "#dec78d",
+  "tags": [
+    "arknights",
+    "prts",
+    "originium",
+    "industrial"
+  ],
+  "wiring": {
+    "id": "dsh-theme-prts-originium",
+    "bundleWired": true
+  }
+}
