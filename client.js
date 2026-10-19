@@ -501,7 +501,32 @@ function mountOriginiumViewer(canvas) {
       tag.setAttribute('data-prts-originium-style','1.4.1'); tag.textContent = CSS; document.head.appendChild(tag);
       return () => tag.remove();
     }
+    function installMarketSync() {
+      if (typeof window === 'undefined' || typeof window.fetch !== 'function') return () => {};
+      const originalFetch = window.fetch;
+      window.fetch = async function(...args) {
+        const response = await originalFetch.apply(this, args);
+        try {
+          const url = typeof args[0] === 'string' ? args[0] : args[0]?.url;
+          if (url && (url.includes('/dsh-market/toggle') || url.includes('/dsh-market/use-skin'))) {
+            const bodyStr = args[1]?.body;
+            if (typeof bodyStr === 'string' && (bodyStr.includes(SOURCE) || url.includes('/dsh-market/use-skin'))) {
+              if (response.ok) {
+                setTimeout(() => {
+                  window.location.reload();
+                }, 350);
+              }
+            }
+          }
+        } catch { /* ignore */ }
+        return response;
+      };
+      return () => {
+        window.fetch = originalFetch;
+      };
+    }
     function apply(ctx) {
+      ctx.effect(installMarketSync, 'prts-originium: market sync');
       ctx.effect(() => {
         if (typeof document === 'undefined' || !document.body) return () => {};
         const body = document.body;
