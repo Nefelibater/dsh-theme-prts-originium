@@ -1,6 +1,6 @@
 {
   "name": "dsh-theme-prts-originium",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "type": "module",
   "description": "PRTS · 源石协议：可旋转 3D 源石晶簇 / 工业指令面板 / 普瑞赛斯记忆残片 / PRTS 启动动画",
   "exports": {
@@ -33,6 +33,7 @@
       "platform": "web",
       "immediately": true,
       "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
         "@deepseek-ai/dsh-client-ui-conversation",
         "@deepseek-ai/dsh-client-ui-sidebar"
       ]

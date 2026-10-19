@@ -158,7 +158,7 @@ window.__ModuleLoader__.load({
       return () => {stop();bootController = null;};
     }
     function Shell() {
-      return h('div',{className:'po-shell','aria-hidden':true,'data-po-build':'1.4.1'},
+      return h('div',{className:'po-shell','aria-hidden':true,'data-po-build':'1.4.2'},
         h('span',{className:'po-shell__tick po-shell__tick--tl'}),h('span',{className:'po-shell__tick po-shell__tick--br'}));
     }
     function mountStyles() {
@@ -168,7 +168,7 @@ window.__ModuleLoader__.load({
       }
       if (typeof document === 'undefined') return () => {};
       const tag = document.createElement('style');
-      tag.setAttribute('data-prts-originium-style','1.4.1'); tag.textContent = CSS; document.head.appendChild(tag);
+      tag.setAttribute('data-prts-originium-style','1.4.2'); tag.textContent = CSS; document.head.appendChild(tag);
       return () => tag.remove();
     }
     function apply(ctx) {
@@ -178,14 +178,14 @@ window.__ModuleLoader__.load({
         const body = document.body;
         const previous = body.getAttribute(BODY_ATTR);
         const previousFocus = body.hasAttribute(FOCUS_ATTR);
-        body.setAttribute(BODY_ATTR,'1.4.1');body.toggleAttribute(FOCUS_ATTR,getFocus());
+        body.setAttribute(BODY_ATTR,'1.4.2');body.toggleAttribute(FOCUS_ATTR,getFocus());
         return () => {
           if (previous === null) body.removeAttribute(BODY_ATTR); else body.setAttribute(BODY_ATTR,previous);
           body.toggleAttribute(FOCUS_ATTR,previousFocus);
         };
       }, 'prts-originium: scope');
       ctx.effect(mountStyles, 'prts-originium: stylesheet');
-      const theme = typeof ctx.get === 'function' ? ctx.get('theme') : null;
+      const theme = typeof ctx.get === 'function' ? ctx.get('theme') : (ctx.theme || null);
       if (theme && typeof theme.overrideTokens === 'function') ctx.effect(() => theme.overrideTokens(SOURCE,TOKENS), 'prts-originium: palette');
       for (const [name,id,component,order] of [
         ['shell.overlay','prts-originium-frame-v1',Shell,35],
@@ -194,6 +194,6 @@ window.__ModuleLoader__.load({
       ]) ctx.slots.inject(name, () => ctx.slots.register({name,id,order},component));
       ctx.effect(mountBootController, 'prts-originium: startup sequence');
     }
-    return {name:SOURCE,inject:['slots'],apply};
+    return {name:SOURCE,inject:['theme','slots'],apply};
   },
 });

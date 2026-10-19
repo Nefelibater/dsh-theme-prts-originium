@@ -1,6 +1,6 @@
 # PRTS · 源石协议 (Originium Protocol)
 
-DeepSeek Harness 专属战术工业风主题插件：**`dsh-theme-prts-originium`**（v1.4.1）。
+DeepSeek Harness 专属战术工业风主题插件：**`dsh-theme-prts-originium`**（v1.4.2）。
 
 ```bash
 # 在 DeepSeek Harness 中一键安装：

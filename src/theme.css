@@ -7,6 +7,8 @@ body[data-dsh-prts-originium]{
   --po-ink:#222e33;--po-muted:#465a64;--po-faint:#4c626b;--po-line:#c5d2d6;--po-line-strong:#8d9fa6;
   --po-accent:#73571d;--po-signal:#dec78d;--po-signal-ink:#302913;--po-technical:#768b94;
   --po-shadow:0 10px 30px #23351d0a;--po-display:'PO Bender','Bahnschrift','Arial Narrow',sans-serif;
+  --dsw-alias-bg-base:var(--po-canvas);
+  --dsw-specific-sidebar-fill:var(--po-recess);
   --dsw-specific-bubble:#dfe8ea;--dsw-specific-input-major:var(--po-panel);
   --dsw-focus-ring-color:var(--po-accent);
   color:var(--po-ink);background:var(--po-canvas)!important;
@@ -18,19 +20,23 @@ body[data-dsh-prts-originium][data-ds-dark-theme]{
   --dsw-specific-bubble:#29383f;
 }
 body[data-dsh-prts-originium] #root{background:var(--po-canvas)!important}
-body[data-dsh-prts-originium] [class*='_frame']:has(>[class*='_sidebarCol']){
+body[data-dsh-prts-originium] [class*='frame']{
   background:var(--po-canvas)!important;--dsh-windows-content-radius:0px;
 }
-body[data-dsh-prts-originium] [class*='_sidebarCol']{
+body[data-dsh-prts-originium] [class*='frame']::before{
+  background:var(--po-recess)!important;
+}
+body[data-dsh-prts-originium] [class*='sidebarCol']{
   background:var(--po-recess)!important;border-right:1px solid var(--po-line)!important;box-shadow:none!important;
 }
-body[data-dsh-prts-originium] [class*='_sidebarCol']>[class*='_root']{background:var(--po-recess)!important}
-body[data-dsh-prts-originium] [class*='_centerCol'],
-body[data-dsh-prts-originium] [class*='_rightbarCol'],
+body[data-dsh-prts-originium] [class*='sidebarCol']>[class*='_root'],
+body[data-dsh-prts-originium] [class*='sidebarCol']>[class$='root']{background:var(--po-recess)!important}
+body[data-dsh-prts-originium] [class*='centerCol'],
+body[data-dsh-prts-originium] [class*='rightbarCol'],
 body[data-dsh-prts-originium] [data-conversation-region]{
   background:var(--po-canvas)!important;border-radius:0!important;box-shadow:none!important;
 }
-body[data-dsh-prts-originium] [class*='_rightbarCol']{border-left:1px solid var(--po-line)}
+body[data-dsh-prts-originium] [class*='rightbarCol']{border-left:1px solid var(--po-line)}
 
 /* Navigation reads like an indexed archive; interaction targets keep their size. */
 body[data-dsh-prts-originium] [class*='_sidebarCol'] [class*='_logoRow']{border-bottom:1px solid var(--po-line);margin-bottom:16px}
