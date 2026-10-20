@@ -2,6 +2,18 @@
 
 DeepSeek Harness 专属战术工业风主题插件：**`dsh-theme-prts-originium`**（v1.4.2）。
 
+## 效果预览
+
+以下为 DeepSeek Harness 桌面端实际运行截图。
+
+### 浅色档案
+
+![PRTS · 源石协议 — 浅色档案](https://raw.githubusercontent.com/Nefelibater/dsh-theme-prts-originium/main/docs/images/theme-light.png)
+
+### 深色终端
+
+![PRTS · 源石协议 — 深色终端](https://raw.githubusercontent.com/Nefelibater/dsh-theme-prts-originium/main/docs/images/theme-dark.png)
+
 ```bash
 # 在 DeepSeek Harness 中一键安装：
 dsh plugin --profile desktop add github:Nefelibater/dsh-theme-prts-originium
@@ -64,7 +76,7 @@ dsh plugin --profile desktop add github:Nefelibater/dsh-theme-prts-originium
 
 独立预览已检查深浅模式、启动分镜、动画跳过与开关持久化、角落档案展开、键盘专注切换、窄窗口、长代码 / 表格独立滚动与模拟发送。详见 `VISUAL-QA.md`；`preview-*.jpg` 是预览截图。
 
-这次未连接真实 Harness 页面进行安装验证：该访问被浏览器权限检查拒绝。插件根据本机应用中提取的实际服务契约、属性钩子与 slot 定义开发。宿主升级后仍需检查样式类名片段的兼容性。
+上方截图来自 DeepSeek Harness 桌面端实际运行。自动化验证基于独立预览；宿主升级后仍需检查样式与其他插件的兼容性。
 
 安装后建议核对一次：欢迎页、长回答、代码横向滚动、表格、折叠工具过程、模型菜单、附件菜单、设置弹层、右侧栏、窄窗口、专注模式，以及停用后的恢复。
 
